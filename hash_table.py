@@ -1,4 +1,3 @@
-
 class Contact:
     '''
     Contact class to represent a contact with a name and number.
