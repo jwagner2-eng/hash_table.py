@@ -1,0 +1,14 @@
+DESIGN MEMO
+Hash Table Contact Management System
+
+Why a Hash Table Is Useful
+
+I think a hash table is a good choice for a contact management system because it allows us to find contacts quickly without having to search through every name individually. The hash function converts a contact's name into an index, which tells the program where to look. This is especially useful when a contact list gets larger because the program can usually find information without checking the entire list.
+
+How I Handled Collisions
+
+For this assignment, I used separate chaining to handle collisions. My hash function adds together the character values of each name using ord() and then uses the table size to calculate an index. Sometimes different names produce the same index. Instead of replacing an existing contact, the program stores multiple contacts in a linked list at that index. When searching for a contact, the program checks each node in that chain until it finds the correct name. I also made sure that inserting an existing name updates its phone number instead of creating another entry.
+
+When to Use a Hash Table Instead of a List or Tree
+
+An engineer might choose a hash table when fast searching, inserting, and updating are more important than keeping information in a specific order. A list might work well for smaller collections or situations where the order of items matters. A tree could be better when information needs to stay sorted or when relationships between items are important. For a contact management system, I think a hash table makes sense because finding a specific person quickly is the main goal.
